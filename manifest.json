@@ -1,0 +1,9 @@
+{
+  "id": "which-key",
+  "name": "Which Key",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "Neovim-style which-key popup: hold a modifier key to see available hotkeys",
+  "author": "Custom",
+  "isDesktopOnly": true
+}

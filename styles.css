@@ -1,0 +1,186 @@
+/* ── Which Key modal ───────────────────────────────────────────────────────── */
+
+.wk-modal {
+  width:     var(--wk-width, 720px) !important;
+  max-width: 95vw !important;
+}
+
+.which-key-modal.modal-content {
+  padding: 0;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+/* ── Hide Obsidian's default X button ───────────────────────────────────────── */
+
+.wk-modal > .modal-close-button {
+  display: none !important;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────────── */
+
+.which-key-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.which-key-mod {
+  font-family: var(--font-monospace);
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.which-key-plus {
+  font-family: var(--font-monospace);
+  font-size: 0.95em;
+  color: var(--text-muted);
+}
+
+.which-key-hint {
+  margin-left: auto;
+  font-size: 0.72em;
+  color: var(--text-faint);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.which-key-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85em;
+  line-height: 1;
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: background-color 0.08s, color 0.08s;
+}
+
+.which-key-close:hover  { background-color: var(--background-modifier-hover); color: var(--text-normal); }
+.which-key-close:focus  { outline: none; }
+
+/* ── Body ───────────────────────────────────────────────────────────────────── */
+
+.which-key-body {
+  padding: 8px;
+}
+
+/* ── Sections ───────────────────────────────────────────────────────────────── */
+
+.which-key-section {
+  margin-bottom: 6px;
+}
+
+.which-key-section-label {
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding: 6px 4px 3px;
+}
+
+/* ── Grids ──────────────────────────────────────────────────────────────────── */
+
+.which-key-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--wk-columns, 2), 1fr);
+  gap: 2px;
+}
+
+.which-key-grid--groups {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+/* ── Items ──────────────────────────────────────────────────────────────────── */
+
+.which-key-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.08s;
+}
+
+.which-key-item:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+/* ── Key badges ─────────────────────────────────────────────────────────────── */
+
+.which-key-key {
+  font-family: var(--font-monospace);
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 3px 10px;
+  min-width: 76px;
+  text-align: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.which-key-key--group {
+  color: var(--text-accent-hover, var(--color-purple, #a78bfa));
+  border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+.which-key-arrow {
+  opacity: 0.6;
+  font-size: 1.1em;
+}
+
+/* ── Direct binding name ────────────────────────────────────────────────────── */
+
+.which-key-name {
+  font-size: 0.9em;
+  color: var(--text-normal);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Sub-group description ──────────────────────────────────────────────────── */
+
+.which-key-group-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.which-key-group-combo {
+  font-family: var(--font-monospace);
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--text-accent-hover, var(--color-purple, #a78bfa));
+}
+
+.which-key-group-count {
+  font-size: 0.75em;
+  color: var(--text-faint);
+}
+
+/* ── Empty state ────────────────────────────────────────────────────────────── */
+
+.which-key-empty {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
