@@ -37,10 +37,17 @@ Press Esc  →  back to ⌘ + …
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| Delay (ms) | `400` | How long to hold a modifier before the popup appears. Lower = faster, but may flash during normal shortcuts. |
-| Show in editor | `on` | Whether to intercept keys when a note is open in edit mode. Disable if it interferes with typing. |
+| Delay (ms) | `400` | How long to hold a modifier key before the popup appears. Lower = faster, but may flash during normal shortcuts. |
+| Show in editor | `on` | Intercept keys when a note is open in edit mode. Disable if it interferes with typing. |
+| Columns | `2` | Number of columns in the binding grid (1–4). Controls how many entries are displayed side by side. |
+| Modal width (px) | `720` | Width of the popup window in pixels. Minimum value is 300. |
 
 ## Notes
 
 - Only shows hotkeys registered through Obsidian's command system. System-level shortcuts (e.g. `Cmd+Opt+I` for DevTools) are not visible.
 - The popup does not appear if you press a full shortcut quickly (within the delay) — normal Obsidian operation is unaffected.
+- Use the built-in command **"Which Key: Show all key bindings"** to browse all bindings without holding a modifier.
+
+## Author
+
+[Kacper Poneta](https://github.com/poneciak57/which-key-obsidian)
